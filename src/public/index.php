@@ -4,9 +4,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require __DIR__ . '../vendor/autoload.php';
 
 use GuzzleHttp\Client;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
 
 $client = new Client();
 
@@ -16,6 +18,7 @@ try {
     $data = json_decode($response->getBody(), true);
 
     $advice = $data['slip']['advice'] ?? 'Aucune donnée disponible pour advice';
+    $adviceId = $data['slip']['id'] ?? 'Aucune donnée disponible pour slip > id';
 
 } catch (Exception $e) {
 
@@ -26,6 +29,13 @@ try {
     echo '</pre>';
 
 }
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    header("Refresh:0;url=index.php");
+    exit;
+}
+
 
 ?>
 
@@ -38,7 +48,19 @@ try {
 </head>
 <body>
 
+
+    <strong>Advice #<?= $adviceId ?></strong>
+
     <h2><?= $advice ?></h2>
+    
+    <img src="pattern-divider-desktop.svg" alt="" srcset="">
+
+    <form method="post">
+        <button type="submit">
+        <img src="icon-dice.svg" alt="" srcset="">
+        </button>
+    </form>
+
 
 </body>
 </html>

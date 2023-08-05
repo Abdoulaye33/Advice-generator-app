@@ -1,4 +1,4 @@
 [build]
   command = "php /opt/build/repo/src/public/index.php"
-  publish = "/opt/build/repo/src/public"
+  publish = "src/public"
   environment = { PHP_VERSION = "8.1" }

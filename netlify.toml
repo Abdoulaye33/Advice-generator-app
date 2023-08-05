@@ -1,0 +1,5 @@
+[build]
+  command = "php /opt/build/repo/src/public/index.php"
+  publish = "/opt/build/repo/src/public"
+  functions = "lambda"
+  environment = { PHP_VERSION = "8.1" }

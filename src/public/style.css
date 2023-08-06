@@ -1,0 +1,60 @@
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: #1f2632; }
+    body div:first-child {
+      margin: auto;
+      padding: 200px; }
+      body div:first-child div:last-child {
+        background-color: #323a49;
+        padding: 30px;
+        width: 500px;
+        height: 250px;
+        text-align: center;
+        color: #cee3e9;
+        border-radius: 20px; }
+        body div:first-child div:last-child .mobile {
+          display: none; }
+        body div:first-child div:last-child strong {
+          color: green;
+          padding: 20px;
+          width: 50vw; }
+      body div:first-child form {
+        padding: 20px 20px 0px 20px; }
+        body div:first-child form button {
+          background-color: green;
+          border-style: none;
+          border-radius: 200px 200px 200px 200px;
+          -webkit-border-radius: 200px 200px 200px 200px;
+          -moz-border-radius: 200px 200px 200px 200px;
+          height: 50px;
+          width: 50px; } }
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: #1f2632; }
+    body div:first-child {
+      margin: auto;
+      padding: 140px 80px 80px 80px; }
+      body div:first-child div:last-child {
+        background-color: #323a49;
+        text-align: center;
+        color: #cee3e9;
+        border-radius: 20px;
+        height: 23vh; }
+        body div:first-child div:last-child .desktop {
+          display: none; }
+        body div:first-child div:last-child strong {
+          color: green;
+          padding: 20px;
+          width: 50vw; }
+        body div:first-child div:last-child form {
+          padding: 20px 20px 0px 20px; }
+          body div:first-child div:last-child form button {
+            background-color: green;
+            border-style: none;
+            border-radius: 200px 200px 200px 200px;
+            -webkit-border-radius: 200px 200px 200px 200px;
+            -moz-border-radius: 200px 200px 200px 200px;
+            height: 50px;
+            width: 50px; } }
+
+/*# sourceMappingURL=style.css.map */

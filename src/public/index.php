@@ -44,23 +44,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Advice Generator App</title>
 </head>
 <body>
 
+    <div>
+        <div>
+            <strong>ADVICE #<?= $adviceId ?></strong>
 
-    <strong>Advice #<?= $adviceId ?></strong>
+            <h2><?= $advice ?></h2>
 
-    <h2><?= $advice ?></h2>
-    
-    <img src="pattern-divider-desktop.svg" alt="" srcset="">
+            <img src="pattern-divider-desktop.svg" alt="" srcset="" class="desktop">
+            <img src="pattern-divider-mobile.svg" alt="" class="mobile">
 
-    <form method="post">
-        <button type="submit">
-        <img src="icon-dice.svg" alt="" srcset="">
-        </button>
-    </form>
-
+            <form method="post">
+                <button type="submit">
+                <img src="icon-dice.svg" alt="" srcset="">
+                </button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
